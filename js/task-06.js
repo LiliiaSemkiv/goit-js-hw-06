@@ -7,9 +7,10 @@ validationInput.addEventListener('blur', onInput)
 function onInput(e){
 if(e.currentTarget.value.length === Number(validLength)){
 
-    validationInput.style.borderColor = '#4caf50'
-    return
+    validationInput.classList.add("valid")
+    validationInput.classList.remove("invalid")
+}else{
+    validationInput.classList.remove("valid")
+    validationInput.classList.add("invalid")
 }
-validationInput.style.borderColor = '#f44336'
-
 }
